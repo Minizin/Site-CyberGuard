@@ -1,0 +1,141 @@
+body {
+    color: white;
+    background-color: rgb(4, 9, 26);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 16px;
+}
+
+ul img {
+      width: 45px;
+    height: 45px;
+    border-radius: 20%;
+    border: 2px solid rgb(251, 250, 252);
+}
+
+a {
+    color: aquamarine;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgb(253, 253, 253);
+}
+
+.contai {
+    padding: 0px 100px;
+}
+
+header h1{
+     color: aquamarine;
+    font-size: 50px;  
+    height: 50px; 
+}
+
+header main section {
+    font-size: 20px;
+    color: gray;
+    height: 90px;
+}
+
+/*---- BOXES ----*/
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1100px;
+}
+
+.card {
+  background-color: #1e293b;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  width: 320px;
+  padding: 20px;
+  border: 1px solid #334155;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(59,130,246,0.4);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.icon {
+  font-size: 22px;
+  margin-right: 8px;
+}
+
+h2 {
+  font-size: 1.1rem;
+  flex: 1;
+  margin: 0;
+}
+
+.tag {
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.tag.essencial {
+  background-color: #22c55e; 
+}
+
+.tag.critico {
+  background-color: #dc2626;
+}
+
+.tag.importante {
+  background-color: #f59e0b;
+}
+
+.tag.recomendado {
+  background-color: #3b82f6;
+}
+
+h3 {
+  margin-top: 15px;
+  font-size: 1rem;
+  color: #93c5fd;
+}
+
+/* Blocos verticais */
+.tips {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 10px;
+}
+
+.tip {
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  padding: 8px 10px;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: #cbd5e1;
+  transition: background-color 0.2s;
+}
+
+.tip:hover {
+  background-color: #1e293b;
+}

@@ -1,0 +1,125 @@
+body {
+    color: white;
+    background-color: rgb(4, 9, 26);
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    align-items: center;
+    padding: 16px;
+}
+
+ul img {
+      width: 45px;
+    height: 45px;
+    border-radius: 20%;
+    border: 2px solid rgb(251, 250, 252);
+}
+
+a {
+    color: aquamarine;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: rgb(253, 253, 253);
+}
+
+.contai {
+    padding: 0px 100px;
+}
+
+header h1{
+     color: aquamarine;
+    font-size: 50px;  
+    height: 50px; 
+}
+
+header main section {
+    font-size: 20px;
+    color: gray;
+    height: 90px;
+}
+
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.box {
+  background-color: #111a2b;
+  border-radius: 12px;
+  padding: 25px;
+  width: 360px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.box:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+}
+
+.icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-size: 24px;
+  color: #4ea5ff;
+  margin: 0;
+}
+
+.tags {
+  margin: 10px 0 15px;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: bold;
+  margin-right: 6px;
+}
+
+.tag.red { background-color: #e74c3c; color: white; }
+.tag.blue { background-color: #004dff; color: white; }
+.tag.green { background-color: #2ecc71; color: white; }
+.tag.orange { background-color: #f39c12; color: white; }
+.tag.critical { background-color: #c0392b; color: white; }
+
+.description {
+  line-height: 1.5;
+  font-size: 15px;
+  color: #cfd6e0;
+}
+
+h3 {
+  margin-top: 15px;
+  font-size: 16px;
+  color: #fff;
+}
+
+.examples {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.example {
+  background-color: #1b263b;
+  padding: 8px 12px;
+  border-radius: 6px;
+  color: #bfc7d3;
+  font-size: 14px;
+}

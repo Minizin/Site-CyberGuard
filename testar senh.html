@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=.0">
+  <title>Teste de Senha</title>
+  <link rel="stylesheet" href="testar senh.css">
+</head>
+
+<body2>
+  <div class="contai">
+  <nav>
+        <ul class="nav-list">
+            <a>
+                <img src="./img/escudo tcc.png"></img>
+            </a>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="testar senh.html">Teste de Senha</a></li>
+            <li><a href="Tutoriais.html">Tutoriais</a></li>
+            <li><a href="Dicas.html">Dicas de Seguraça</a></li>
+            <li><a href="Glossario.html">Glossario</a></li>
+        </ul>
+    </nav>
+  </div> 
+
+  <header2>
+    <h1>Teste de Senha</h1>
+    <main>
+        <section>
+            <p class="cent">Sua fonte confiável de informações sobre cybersegurança.</p>
+        </section>
+        <section2>
+            <p class="cent"> Aprenda a proteger-se no mundo digital.</p>
+        </section2>
+    </main>
+  </header2>
+</body2>
+
+<body>
+   
+  <div class="container">
+    <header>Digite sua senha</header>
+    <form action="#">
+      <div class="field">
+        <input type="password" onkeyup="trigger()" placeholder="Informe sua senha">
+        <span class="showBtn">Ocultar</span>
+      </div>
+      <div class="indicator">
+        <span class="fraco"></span>
+        <span class="medio"></span>
+        <span class="forte"></span>
+      </div>
+      <div class="text">Fraca</div>
+    </form>
+  </div>
+
+  <script>
+    const indicator = document.querySelector('.indicator');
+    const input = document.querySelector('input');
+    const fraco = document.querySelector('.fraco');
+    const medio = document.querySelector('.medio');
+    const forte = document.querySelector('.forte');
+    const text = document.querySelector('.text');
+    const showBtn = document.querySelector('.showBtn');
+
+    let regExpFraco = /[a-z]/;
+    let regExpMedio = /\d+/;
+    let regExpForte = /.[!,@,#,$,%,^,&,*,?,_,~,-,(,),(:),(;),(¨),_]/;
+
+    function trigger() {
+      if (input.value != "") {
+        indicator.style.display = "flex";
+
+        if (input.value.length <= 3
+          && (input.value.match(regExpFraco)
+            || input.value.match(regExpMedio)
+            || input.value.match(regExpForte))) no = 1;
+
+        if (input.value.length >= 6
+          && ((input.value.match(regExpFraco)
+            && input.value.match(regExpMedio))
+            || (input.value.match(regExpMedio)
+              && input.value.match(regExpForte))
+            || (input.value.match(regExpFraco)
+              && input.value.match(regExpForte)))) no = 2;
+
+        if (input.value.length >= 6
+          && input.value.match(regExpFraco)
+          && input.value.match(regExpMedio)
+          && input.value.match(regExpForte)) no = 3;
+
+        if (no == 1){
+          fraco.classList.add('active');
+          text.style.display ="block";
+          text.textContent="A sua senha é fraca";
+          text.classList.add('fraco');
+        }
+
+        if (no == 2){
+          medio.classList.add('active');
+          text.style.display ="block";
+          text.textContent="A sua senha é mediana";
+          text.classList.add('medio');
+        }else{
+          medio.classList.remove('active');
+          text.classList.remove('medio');
+        }
+
+        if (no == 3){
+          forte.classList.add('active');
+          text.style.display ="block";
+          text.textContent="A sua senha é forte";
+          text.classList.add('forte');
+        }else{
+          forte.classList.remove('active');
+          text.classList.remove('forte');
+        }
+
+        showBtn.style.display='block';
+        showBtn.onclick=function(){
+
+          if(input.type =='password'){
+            showBtn.textContent="Ver";
+            input.type = 'text';
+          }else{
+            showBtn.textContent="Ocultar";
+            input.type = 'password';
+          }
+        }
+
+      } else {
+        indicator.style.display = "none";
+        text.style.display = "none";
+        showBtn.style.display = "none"
+      }
+    }
+  </script>
+</body>
+
+<body3>
+  <div class="dicas-container">
+  <h2>Dicas importantes</h2>
+  <ul>
+    <li>Use um gerenciador de senhas para criar e armazenar senhas seguras</li>
+    <li>Nunca reutilize a mesma senha em diferentes contas</li>
+    <li>Ative a autenticação de dois fatores sempre que possível</li>
+    <li>Troque suas senhas regularmente, especialmente se houver suspeita de vazamento</li>
+  </ul>
+</div>
+
+</body3>
+
+</html>
